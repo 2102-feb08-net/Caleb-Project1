@@ -1,0 +1,15 @@
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.csprojAssemblyReference.cache
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.AssemblyInfoInputs.cache
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.AssemblyInfo.cs
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.DataAccess.deps.json
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.DataAccess.runtimeconfig.json
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.DataAccess.runtimeconfig.dev.json
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.DataAccess.dll
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\ref\BestEats.DataAccess.dll
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.DataAccess.pdb
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.dll
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\ref\BestEats.DataAccess.dll
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.pdb
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.genruntimeconfig.cache
