@@ -25,4 +25,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BestEats.DataAccess\BestEats.DataAccess.csproj" />
+    <ProjectReference Include="..\BestEats\BestEats.Logic\BestEats.Logic.csproj" />
+    <ProjectReference Include="..\BestEats\BestEats.UI\BestEats.UI.csproj" />
+  </ItemGroup>
+
 </Project>

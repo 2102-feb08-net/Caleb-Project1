@@ -6,12 +6,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace BestEats.DataAccess
 {
-    public class ContextDepend //: IDisposable
+    public class ContextDepend : IDisposable
     {
-        /*
+        
         private bool _disposedValue;
         private readonly List<IDisposable> _disposables = new List<IDisposable>();
         public DB_BestEatsContext ConnectDB(string[] args = null)
@@ -22,6 +25,7 @@ namespace BestEats.DataAccess
             optionBuild.UseSqlServer(connString);
 
                     return new DB_BestEatsContext(optionBuild.Options);
+            
         }
 
         
@@ -58,6 +62,5 @@ namespace BestEats.DataAccess
             Dispose(disposing: true);
             GC.SuppressFinalize(this);
         }
-        */
     }
 }

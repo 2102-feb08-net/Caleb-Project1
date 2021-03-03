@@ -2458,6 +2458,49 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "BestEats.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BestEats.Logic": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3"
+        },
+        "compile": {
+          "bin/placeholder/BestEats.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BestEats.DataAccess.dll": {}
+        }
+      },
+      "BestEats.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3"
+        },
+        "compile": {
+          "bin/placeholder/BestEats.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BestEats.Logic.dll": {}
+        }
+      },
+      "BestEats.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.3"
+        },
+        "compile": {
+          "bin/placeholder/BestEats.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BestEats.UI.dll": {}
+        }
       }
     }
   },
@@ -8076,10 +8119,28 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "BestEats.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../BestEats.DataAccess/BestEats.DataAccess.csproj",
+      "msbuildProject": "../BestEats.DataAccess/BestEats.DataAccess.csproj"
+    },
+    "BestEats.Logic/1.0.0": {
+      "type": "project",
+      "path": "../BestEats/BestEats.Logic/BestEats.Logic.csproj",
+      "msbuildProject": "../BestEats/BestEats.Logic/BestEats.Logic.csproj"
+    },
+    "BestEats.UI/1.0.0": {
+      "type": "project",
+      "path": "../BestEats/BestEats.UI/BestEats.UI.csproj",
+      "msbuildProject": "../BestEats/BestEats.UI/BestEats.UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BestEats.DataAccess >= 1.0.0",
+      "BestEats.Logic >= 1.0.0",
+      "BestEats.UI >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
@@ -8120,7 +8181,17 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats.DataAccess\\BestEats.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats.DataAccess\\BestEats.DataAccess.csproj"
+            },
+            "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats\\BestEats.Logic\\BestEats.Logic.csproj": {
+              "projectPath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats\\BestEats.Logic\\BestEats.Logic.csproj"
+            },
+            "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats\\BestEats.UI\\BestEats.UI.csproj": {
+              "projectPath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats\\BestEats.UI\\BestEats.UI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

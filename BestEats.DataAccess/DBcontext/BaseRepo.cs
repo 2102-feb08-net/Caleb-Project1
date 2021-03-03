@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BestEats;
+using BestEats.Logic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.SqlServer;
+
+
 
 namespace BestEats.DataAccess
 {
     public class BaseRepo
     {
-        /*
+        
         private readonly DB_BestEatsContext _context;
         
         public BaseRepo(DB_BestEatsContext context)
@@ -210,7 +215,7 @@ namespace BestEats.DataAccess
         {
             _context.SaveChanges();
         }
-        */
+        
 
     }
 

@@ -13,3 +13,6 @@ C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\Best
 C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\ref\BestEats.DataAccess.dll
 C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.pdb
 C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.genruntimeconfig.cache
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.Logic.dll
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\bin\Debug\net5.0\BestEats.Logic.pdb
+C:\Users\piran\revature\Caleb-Project1\BestEats.DataAccess\obj\Debug\net5.0\BestEats.DataAccess.csproj.CopyComplete
