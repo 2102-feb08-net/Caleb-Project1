@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BestEats
+namespace BestEats.Logic
 {
 	public class Order
 	{

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BestEats
+namespace BestEats.Logic
 {
     public class Customer
     {

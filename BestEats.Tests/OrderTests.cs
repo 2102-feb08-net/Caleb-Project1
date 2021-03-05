@@ -1,5 +1,7 @@
 using System;
 using Xunit;
+using BestEats.Logic;
+using BestEats.DataAccess;
 
 
 namespace BestEats.Tests
@@ -14,7 +16,7 @@ namespace BestEats.Tests
         [InlineData(2, 3, 2, 3, "Orange", 10, "2020-10-5")]
         public void validateAddOrderInputsSucceed(int OrderIdtest, int CustomerIdTest, int StoreIdTest, int ProductIdTest, string ItemNameTest, int ProductQuantityTest, DateTimeOffset OrderPurchaseDateTest)
         {
-            Order ordertest = new Order
+            BestEats.Logic.Order ordertest = new BestEats.Logic.Order
             {
                 OrderId = OrderIdtest,
                 CustomerId = CustomerIdTest,

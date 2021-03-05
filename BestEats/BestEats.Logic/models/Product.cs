@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BestEats
+namespace BestEats.Logic
 {
     public class Product
     {

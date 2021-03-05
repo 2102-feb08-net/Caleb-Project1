@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.Collections.Generic;
 
-namespace BestEats
+namespace BestEats.Logic
 {
 	public class Store
 	{

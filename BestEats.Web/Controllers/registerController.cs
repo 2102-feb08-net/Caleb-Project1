@@ -1,18 +1,58 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BestEats.DataAccess;
+using BestEats.Logic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BestEats.Web.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class RegisterController : ControllerBase
     {
+        
+        private readonly BaseRepo _repo;
+
+        /*
+        public RegisterController(BaseRepo repo)
+        {
+            _repo = repo;
+        }
+        */
+
+        [HttpPost("api/customers")]
+        public void RegisterCustomer(BestEats.Logic.Customer cust)
+        {
+            _repo.RegisterCustomer(cust);
+        }
+    } //
+} //
+
+
+
+
+        /*
+        public void RegisterCustomer(BestEats.Customer DBcustomer)
+        {
+            Customer customer = new Customer
+            {
+                FullName = DBcustomer.FullName,
+                CustPassword = DBcustomer.CustPassword
+            };
+
+            _context.Add(customer);
+        }
+        */
         // GET: api/<ValuesController>
+
+        /*
+
+
         [HttpGet]
         public IEnumerable<string> Get()
         {
@@ -45,3 +85,9 @@ namespace BestEats.Web.Controllers
         }
     }
 }
+
+
+        */
+
+
+

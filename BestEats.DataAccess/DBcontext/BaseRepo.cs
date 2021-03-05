@@ -30,15 +30,15 @@ namespace BestEats.DataAccess
         {
             throw new NotImplementedException();
         }
-        public BestEats.Customer GetCustomerByName(string customerName)
+        public BestEats.Logic.Customer GetCustomerByName(string customerName)
         {
             throw new NotImplementedException();
         }
 
-        public BestEats.Customer GetCustomerByID(int customerID)
+        public BestEats.Logic.Customer GetCustomerByID(int customerID)
         {
             Customer customer = _context.Customers.Find(customerID);
-            return new BestEats.Customer
+            return new BestEats.Logic.Customer
             {
                 CustId = customer.CustId,
                 FullName = customer.FullName,
@@ -85,7 +85,7 @@ namespace BestEats.DataAccess
             }
             return exists;
         }
-        public void RegisterCustomer(BestEats.Customer DBcustomer)
+        public void RegisterCustomer(BestEats.Logic.Customer DBcustomer)
         {
             Customer customer = new Customer
             {
@@ -175,7 +175,7 @@ namespace BestEats.DataAccess
         }
 
 
-        public void AddOrder(BestEats.Order DBorder)
+        public void AddOrder(BestEats.Logic.Order DBorder)
         {
             Order order = new Order
             {
@@ -195,14 +195,14 @@ namespace BestEats.DataAccess
 
         // PACKAGE REPO SECTION
 
-        public List<BestEats.Inventory> GetInventory()
+        public List<BestEats.Logic.Inventory> GetInventory()
         {
             var results = _context.Inventories;
-            List<BestEats.Inventory> inventories = new List<BestEats.Inventory>();
+            List<BestEats.Logic.Inventory> inventories = new List<BestEats.Logic.Inventory>();
 
             foreach (var result in results)
             {
-                inventories.Add(new BestEats.Inventory(result.StoreId, result.ProductId, result.Amount));
+                inventories.Add(new BestEats.Logic.Inventory(result.StoreId, result.ProductId, result.Amount));
             }
             return inventories;
         }
