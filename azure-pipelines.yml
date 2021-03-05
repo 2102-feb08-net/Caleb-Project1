@@ -1,28 +1,71 @@
-# ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting the full .NET Framework.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: ubuntu-latest
 
 variables:
   buildConfiguration: 'Release'
 
 steps:
-  - script: dotnet build BestEats/ --configuration $(buildConfiguration)
-    displayName: 'dotnet build $(buildConfiguration)'
+- task: UseDotNet@2
+  displayName: dotnet sdk
+  inputs:
+    packageType: 'sdk'
+    version: '5.0.x'
+- task: UseDotNet@2
+  inputs:
+    packageType: 'runtime'
+    version: '2.x'
 
-  - script: dotnet test BestEats.Tests/
-    displayName: 'Unit Test'
+- task: SonarCloudPrepare@1
+  displayName: sonar prepare analysis
+  inputs:
+    SonarCloud: 'BestEatsP1'
+    organization: '2102-feb08-net'
+    scannerMode: 'MSBuild'
+    projectKey: '2102-feb08-net_Caleb-Project1'
+    projectName: 'BestEats'
+    extraProperties: 'sonar.cs.opencover.reportsPaths=$(Agent.TempDirectory)/*/coverage.opencover.xml'
+    
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: dotnet build
+  workingDirectory: 'BestEats'
+  
+- task: DotNetCoreCLI@2
+  displayName: dotnet test
+  inputs:
+    command: 'test'
+    arguments: '--configuration $(buildConfiguration) --collect "xplat code coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura,opencover'
+    workingDirectory: 'BestEats'
+- task: SonarCloudAnalyze@1
+  displayName: sonar run analysis
 
-  - task: AzureRmWebAppDeployment@4
-    inputs:
-      ConnectionType: 'AzureRM'
-      azureSubscription: 'Azure subscription 1(54aeee99-cfaf-4de7-9c10-a360891a5e01)'
-      appType: 'webApp'
-      WebAppName: 'https://besteats/.azurewebsites.net/'
-      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+- task: SonarCloudPublish@1
+  displayName: publish sonar quality gate
+  inputs:
+    pollingTimeoutSec: '300'
+
+- task: PublishCodeCoverageResults@1
+  displayName: publish code coverage report
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(Agent.TempDirectory)/*/coverage.cobertura.xml'
+
+- task: DotNetCoreCLI@2
+  displayName: dotnet publish
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    projects: 'Caleb-Project1/BestEats.Web'
+    zipAfterPublish: true
+
+- task: AzureRmWebAppDeployment@4
+  displayName: app service deploy
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(54aeee99-cfaf-4de7-9c10-a360891a5e01)'
+    appType: 'webApp'
+    WebAppName: 'BestEats'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
