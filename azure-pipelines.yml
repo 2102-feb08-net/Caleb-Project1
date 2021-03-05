@@ -25,7 +25,7 @@ steps:
     SonarCloud: 'BestEatsP1'
     organization: '2102-feb08-net'
     scannerMode: 'MSBuild'
-    projectKey: '2102-feb08-net_Caleb_Project1'
+    projectKey: '2102-feb08-net_Caleb-Project1'
     projectName: 'BestEats'
     extraProperties: 'sonar.cs.opencover.reportsPaths=$(Agent.TempDirectory)/*/coverage.opencover.xml'
     
