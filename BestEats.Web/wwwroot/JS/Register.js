@@ -21,15 +21,6 @@ async function registerSubmit(event) {
         }
     */
 
-        const fetchOptions = {
-            method: "POST",
-            body: JSON.stringify(customer),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }
-
-
     await fetch("/api/customers/new", {
         method: "POST",
         body: JSON.stringify(customer),
@@ -45,31 +36,10 @@ async function registerSubmit(event) {
             location.reload();
         }
     });
-        
-}
 
+    
+}
 
 let registerForm = document.getElementById('registerCustomer');
 registerForm.onsubmit = registerSubmit;
 
-
-
-
-/*
-function sendRegister(customer) {
-
-    return fetch('/api/new/register', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(customer)
-    }).then(response => {
-        if (!response.ok) {
-            throw new error(`Error on Network response with Customer (${response.status})`);
-        }
-
-
-    });
-}
- */       

@@ -30,64 +30,88 @@ namespace BestEats.Web.Controllers
         public async Task RegisterCustomer([Required] BestEats.Logic.Customer cust) 
             => await _customerRepo.RegisterCustomerAsync(cust);
         
-    } 
-} 
-
-
-
-
-        /*
-        public void RegisterCustomer(BestEats.Customer DBcustomer)
-        {
-            Customer customer = new Customer
-            {
-                FullName = DBcustomer.FullName,
-                CustPassword = DBcustomer.CustPassword
-            };
-
-            _context.Add(customer);
-        }
-        */
-        // GET: api/<ValuesController>
-
-        /*
-
-
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<ValuesController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<ValuesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
+
+
+    
+
+
 }
 
 
-        */
+
+
+/*
+public bool checkCustomerPasswordExists(string userName, string passwordInput)
+{
+    bool exists = false;
+    var inputCust = _context.Customers
+        .Where(u => u.FullName == userName && u.CustPassword == passwordInput).ToList();
+
+
+    foreach (var c in inputCust)
+    {
+        exists = true;
+    }
+    return exists;
+}
+
+public bool checkCustomerNameExists(string loginInput)
+{
+    bool exists = false;
+    var inputCust = _context.Customers
+        .Where(c => string.Equals(c.FullName, loginInput)).ToList();
+
+    foreach(var c in inputCust)
+    {
+        exists = true;
+    }
+    return exists;
+}
+*/
+
+
+
+// GET: api/<ValuesController>
+
+/*
+
+
+[HttpGet]
+public IEnumerable<string> Get()
+{
+    return new string[] { "value1", "value2" };
+}
+
+// GET api/<ValuesController>/5
+[HttpGet("{id}")]
+public string Get(int id)
+{
+    return "value";
+}
+
+// POST api/<ValuesController>
+[HttpPost]
+public void Post([FromBody] string value)
+{
+}
+
+// PUT api/<ValuesController>/5
+[HttpPut("{id}")]
+public void Put(int id, [FromBody] string value)
+{
+}
+
+// DELETE api/<ValuesController>/5
+[HttpDelete("{id}")]
+public void Delete(int id)
+{
+}
+}
+}
+
+
+*/
 
 
 
