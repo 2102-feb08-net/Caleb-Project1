@@ -26,10 +26,20 @@ namespace BestEats.Web.Controllers
         }
         
 
-        [HttpPost("api/customers/new")]
+        [HttpPost("api/register/new")]
         public async Task RegisterCustomer([Required] BestEats.Logic.Customer cust) 
             => await _customerRepo.RegisterCustomerAsync(cust);
-        
+
+
+        /*
+        [HttpPost("login/${fullName}{custPassword}")]
+        public void LoginCustomer()
+        {
+             _customerRepo.C
+        }
+        */
+
+
     }
 
 }

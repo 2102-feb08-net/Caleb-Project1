@@ -26,7 +26,7 @@ async function registerSubmit(event) {
         }
     
 
-    await fetch("/api/customers/new", {
+    await fetch("/api/register/new", {
         method: "POST",
         body: JSON.stringify(customer),
         headers: {

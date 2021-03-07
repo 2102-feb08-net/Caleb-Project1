@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "59Mkk1+tGehb/6PJ0qHjWyo00DMRyTg1Jk27ZIZ9GHMLbcGrlfyEgprzQi0rH9tzmBm3kBI1tCXKE0+xRgXCQA==",
+  "dgSpecHash": "Ekq/C9XN6JpX+4fMI2U1vTTOo9sUGMMrjwTflRc8YhPPZbJ92b16hyTqi8GCaB5tm1iD4KciDb1a7JF2wQm81w==",
   "success": true,
   "projectFilePath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats.Web\\BestEats.Web.csproj",
   "expectedPackageFiles": [
@@ -60,7 +60,7 @@
     "C:\\Users\\piran\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\piran\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\piran\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\piran\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\piran\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\piran\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\piran\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
