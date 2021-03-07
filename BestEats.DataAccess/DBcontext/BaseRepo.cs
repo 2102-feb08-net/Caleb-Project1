@@ -85,6 +85,16 @@ namespace BestEats.DataAccess
             }
             return exists;
         }
+
+        public async Task RegisterCustomerAsync(BestEats.Logic.Customer DBcustomer)
+        {
+            await _context.Customers.AddAsync(new Customer()
+            {
+                FullName = DBcustomer.FullName,
+                CustPassword = DBcustomer.CustPassword
+            });
+            await _context.SaveChangesAsync();
+        }
         public void RegisterCustomer(BestEats.Logic.Customer DBcustomer)
         {
             Customer customer = new Customer

@@ -11,7 +11,12 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
+using System.Diagnostics;
 using System.Threading.Tasks;
+using BestEats.DataAccess;
+using BestEats.Logic;
+using Microsoft.EntityFrameworkCore;
 
 namespace BestEats.Web
 {
@@ -25,8 +30,18 @@ namespace BestEats.Web
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+
+        private void BuildDbOptions(DbContextOptionsBuilder builder)
+        {
+            string connectionString = Configuration.GetConnectionString("DBbestEats");
+            builder.UseSqlServer(connectionString);
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DB_BestEatsContext>(BuildDbOptions);
+
+            services.AddScoped<BaseRepo>(); 
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,7 +62,7 @@ namespace BestEats.Web
 
             app.UseHttpsRedirection();
             app.UseRewriter(new RewriteOptions()
-                .AddRedirect("^$", "MainPage.html"));
+                .AddRedirect("^$", "html/MainPage.html"));
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();

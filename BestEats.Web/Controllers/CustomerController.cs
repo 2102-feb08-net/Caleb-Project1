@@ -6,32 +6,32 @@ using System.Linq;
 using System.Threading.Tasks;
 using BestEats.DataAccess;
 using BestEats.Logic;
+using System.ComponentModel.DataAnnotations;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BestEats.Web.Controllers
 {
-    //[Route("api/[controller]")]
+
     [ApiController]
-    public class RegisterController : ControllerBase
+    public class CustomerController : ControllerBase
     {
         
-        private readonly BaseRepo _repo;
+        private readonly BaseRepo _customerRepo;
 
-        /*
-        public RegisterController(BaseRepo repo)
+        
+        public CustomerController(BaseRepo customerRepo)
         {
-            _repo = repo;
+            _customerRepo = customerRepo;
         }
-        */
+        
 
-        [HttpPost("api/customers")]
-        public void RegisterCustomer(BestEats.Logic.Customer cust)
-        {
-            _repo.RegisterCustomer(cust);
-        }
-    } //
-} //
+        [HttpPost("api/customers/new")]
+        public async Task RegisterCustomer([Required] BestEats.Logic.Customer cust) 
+            => await _customerRepo.RegisterCustomerAsync(cust);
+        
+    } 
+} 
 
 
 
