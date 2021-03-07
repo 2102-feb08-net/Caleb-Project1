@@ -11,15 +11,20 @@ async function registerSubmit(event) {
         const customer = {
             fullName: document.getElementById('usernameRegister').value,
             custPassword: document.getElementById('passwordRegister').value,
-        };
-    /*
-        if (customer.fullName.validity.typeMismatch) {
-            throw new error("invalid username.");
+    };
+
+    let wordTest = /^[A-Za-z]+$/;
+    
+        if (!customer.fullName.match(wordTest)) {
+            alert(`Invalid username. Please retry`);
+            throw TypeError("invalid username.");
         }
-        if (customer.password.validity.typeMismatch) {
-            throw new error("invalid password");
+        
+        if (customer.custPassword.length < 8) {
+            alert(`Invalid password. Please retry`);
+            throw RangeError("invalid password");
         }
-    */
+    
 
     await fetch("/api/customers/new", {
         method: "POST",
