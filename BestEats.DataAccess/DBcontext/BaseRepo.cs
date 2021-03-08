@@ -197,14 +197,44 @@ namespace BestEats.DataAccess
                 ItemName = DBorder.ItemName,
                 ProductQuantity = DBorder.ProductQuantity,
                 OrderPurchaseDate = DBorder.OrderPurchaseDate
-                
-                
+                  
             };
-
             _context.Add(order);
         }
 
+
+
         // PACKAGE REPO SECTION
+
+        /*
+        public List<BestEats.Logic.Package> createPackageForCustomer(string fullName)
+        {
+            var results = _context.Packages;
+            List<BestEats.Logic.Inventory> inventories = new List<BestEats.Logic.Inventory>();
+
+            foreach (var result in results)
+            {
+                inventories.Add(new BestEats.Logic.Inventory(result.StoreId, result.ProductId, result.Amount));
+            }
+            return ;
+        }
+        
+
+        public List<BestEats.Logic.Inventory> GetPackage()
+        {
+            var results = _context.Inventories;
+            List<BestEats.Logic.Inventory> inventories = new List<BestEats.Logic.Inventory>();
+
+            foreach (var result in results)
+            {
+                inventories.Add(new BestEats.Logic.Inventory(result.StoreId, result.ProductId, result.Amount));
+            }
+            return inventories;
+        }
+        */
+
+
+        // INVENTORY REPO SECTION
 
         public List<BestEats.Logic.Inventory> GetInventory()
         {
@@ -220,7 +250,7 @@ namespace BestEats.DataAccess
 
 
 
-        // INVENTORY REPO SECTION
+
 
         public void Save()
         {
