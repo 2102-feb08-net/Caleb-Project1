@@ -21,6 +21,7 @@ jQuery("#Easterville").click(function (e) {
     e.preventDefault();
 });
 
+//testing pipeline
 /*
 let storeSelect = document.getElementById('storeDropDownSelection');
 storeSelect.onclick = alert(`Showing ${storeSelect}`);
