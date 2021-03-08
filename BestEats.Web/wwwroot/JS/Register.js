@@ -38,7 +38,7 @@ async function registerSubmit(event) {
         }
         else {
             alert(`Successfully added ${customer.fullName}`);
-            location.reload();
+            window.location.reload();
         }
     });
 

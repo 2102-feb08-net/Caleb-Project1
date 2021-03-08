@@ -16,7 +16,8 @@ namespace BestEats.Web.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        
+        protected string currentCustomer;
+
         private readonly BaseRepo _customerRepo;
 
         
@@ -31,6 +32,25 @@ namespace BestEats.Web.Controllers
             => await _customerRepo.RegisterCustomerAsync(cust);
 
 
+        [HttpGet("api/login/{fullName}/{custPassword}")]
+        public bool LoginCustomer([Required] string fullName, string custPassword)
+        {
+
+            return _customerRepo.CheckCustomerPasswordExists(fullName, custPassword);
+
+            /*if (_customerRepo.CheckCustomerPasswordExists(fullName, custPassword))
+            {
+                currentCustomer = fullName;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            */
+
+        }
+
         /*
         [HttpPost("login/${fullName}{custPassword}")]
         public void LoginCustomer()
@@ -38,15 +58,9 @@ namespace BestEats.Web.Controllers
              _customerRepo.C
         }
         */
-
-
     }
 
 }
-
-
-
-
 /*
 public bool checkCustomerPasswordExists(string userName, string passwordInput)
 {

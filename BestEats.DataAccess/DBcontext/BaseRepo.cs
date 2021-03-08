@@ -59,7 +59,7 @@ namespace BestEats.DataAccess
             return idResult;
         }
         
-        public bool checkCustomerPasswordExists(string userName, string passwordInput)
+        public bool CheckCustomerPasswordExists(string userName, string passwordInput)
         {
             bool exists = false;
             var inputCust = _context.Customers
@@ -73,7 +73,7 @@ namespace BestEats.DataAccess
             return exists;
         }
 
-        public bool checkCustomerNameExists(string loginInput)
+        public bool CheckCustomerNameExists(string loginInput)
         {
             bool exists = false;
             var inputCust = _context.Customers
@@ -104,6 +104,7 @@ namespace BestEats.DataAccess
             };
 
             _context.Add(customer);
+            Save();
         }
 
         public void UnregisterCustomer(int customerID)

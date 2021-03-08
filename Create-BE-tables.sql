@@ -204,6 +204,7 @@ INSERT INTO BE.Orders(orderID, customerId, storeId, productId, itemName, product
 
 /*
 
+
 SELECT * FROM BE.Customer
 SELECT * FROM BE.Store
 SELECT * FROM BE.Product

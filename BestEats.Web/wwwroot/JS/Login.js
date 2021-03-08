@@ -23,29 +23,27 @@ function loginSubmit(event) {
     }
 
 
-        fetch(`/api/login/${customer.fullName}/${customer.custPassword}`){
-        method: "POST",
-        body: JSON.stringify(customer),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    }).then(response => {
-        if (!response.ok) {
-            throw new error(`Error on Network response with Customer (${response.status})`);
+    fetch(`/api/login/${customer.fullName}/${customer.custPassword}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new error(`Error on Network response with Login (${response.status})`);
+            }
+
+            else {
+                return response.json();
+            }
+        }
+    ).then(response => {
+        if (response) {
+            alert(`Successfully logged in ${customer.fullName}`);
+            sessionStorage.setItem("fullName", customer.fullName);
+            window.location.assign("./Profile.html");
         }
         else {
-            alert(`Successfully logged in ${customer.fullName}`);
-            location.reload();
+            alert(`failed to login`);
         }
     });
-
-
 }
-
-let registerForm = document.getElementById('registerCustomer');
+let registerForm = document.getElementById('loginCustomer');
 registerForm.onsubmit = loginSubmit;
 
-
-
-
-}
