@@ -10,6 +10,7 @@ function loginSubmit(event) {
         custPassword: document.getElementById('passwordLogin').value,
     };
 
+    // is lowercase or uppercase letters only. no spaces
     let wordTest = /^[A-Za-z]+$/;
 
     if (!customer.fullName.match(wordTest)) {
