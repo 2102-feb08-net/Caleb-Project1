@@ -1,1 +1,57 @@
 ﻿
+.user-dropdown .dropdown-menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    left: 50% !important;
+    transform: translateX(50%) !important;
+    transform: translateY(50%) !important;
+    top: 50% !important;
+}
+
+.user-dropdown .dropdown {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left: 50% !important;
+    transform: translateX(50%) !important;
+    transform: translateY(50%) !important;
+    top: 50% !important;
+}
+
+.dropdown {
+    
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+
+    
+}
+
+.storeloc {
+    position: absolute !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+
+    left: 30% !important;
+    height: 40% !important;
+    top: 40% !important;
+
+}
+
+.itemsel {
+    position: absolute !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    left: 30% !important;
+    height: 50% !important;
+    top: 50% !important;
+}
+
+.itemquant {
+    position: absolute !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    left: 50% !important;
+    height: 40% !important;
+    top: 40% !important;
+}
