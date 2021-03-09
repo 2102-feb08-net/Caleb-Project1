@@ -41,8 +41,6 @@ async function registerSubmit(event) {
             window.location.reload();
         }
     });
-
-    
 }
 
 let registerForm = document.getElementById('registerCustomer');

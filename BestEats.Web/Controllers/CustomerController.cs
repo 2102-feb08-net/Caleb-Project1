@@ -38,6 +38,16 @@ namespace BestEats.Web.Controllers
             return _customerRepo.CheckCustomerPasswordExists(fullName, custPassword);
 
         }
+
+
+        [HttpGet("api/customer/{fullName}")]
+        public int getCustIDfromName([Required] string fullName)
+        {
+
+            return _customerRepo.GetCustomerIDByName(fullName);
+
+        }
+
     }
 }
 

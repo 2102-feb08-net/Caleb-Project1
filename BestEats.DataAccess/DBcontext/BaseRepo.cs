@@ -200,7 +200,9 @@ namespace BestEats.DataAccess
                   
             };
             _context.Add(order);
+            Save();
         }
+
 
 
 

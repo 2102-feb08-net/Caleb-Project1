@@ -12,7 +12,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BestEats.Web.Controllers
 {
-    [Route("api/[controller]")]
+
+
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -26,15 +27,30 @@ namespace BestEats.Web.Controllers
         }
 
 
+        [HttpPost("api/order/new")]
+        public void AddNewOrder(BestEats.Logic.Order order)
+        {                             
+           _orderRepo.AddOrder(order);
+        }
 
         /*
         [HttpPost("api/register/new")]
         public async Task RegisterCustomer([Required] BestEats.Logic.Customer cust)
             => await _customerRepo.RegisterCustomerAsync(cust);
+        
+
+        public string GetItemNameByProductID(int productID)
+        {
+
+            var itemName = _context.Products
+                .Where(n => n.ProductId == productID)
+                .AsEnumerable()
+                .First().ProductName;
+
+
+            return itemName;
+        }
         */
-
-
-
 
     }
 }
