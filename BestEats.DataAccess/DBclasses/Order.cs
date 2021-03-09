@@ -12,6 +12,7 @@ namespace BestEats.DataAccess
             Packages = new HashSet<Package>();
         }
 
+        /*
         public Order(int orderId, int customerId, int storeId, int productId, string itemName, int productQuantity, DateTimeOffset orderPurchaseDate)
         {
             OrderId = orderId;
@@ -22,6 +23,7 @@ namespace BestEats.DataAccess
             ProductQuantity = productQuantity;
             OrderPurchaseDate = orderPurchaseDate;
         }
+        */
 
         public int OrderId { get; set; }
         public int CustomerId { get; set; }

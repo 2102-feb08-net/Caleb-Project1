@@ -1,15 +1,17 @@
 ﻿
+const profileBody = document.getElementById("profileBody");
 let profileForm = document.getElementById('profileForm');
 let fullName = sessionStorage.getItem("fullName");
 let customerId;
 getCustomerIDFromName(fullName);
+
+
 profileForm.onsubmit = ProfileTable;
 
 
 function ProfileTable(event) {
     
     event.preventDefault();
-
 
 
     fetch(`/api/profile/new/${customerId}`)
@@ -20,15 +22,14 @@ function ProfileTable(event) {
         return response.json();
     })
         .then(orders => {
-            for (const order in orders) {
-                const row = profileOrdersTable.insertRow();
-                row.innerHTML = `<td class="oTableName">${orders[order].oTableName}</td>
-                    <td class="oTableAmount">${orders[order].oTableAmount}</td>
-                    <td class="oStoreLocation">${orders[order].oStoreLocation}</td>
-                    <td class="oPurchaseDate">${orders[order].oPurchaseDate}</td>`;
+            for (const order of orders) {
+                const row = profileBody.insertRow();
+                row.innerHTML = `<td class="oItemName">${order.itemName}</td>
+                    <td class="oItemAmount">${order.itemAmount}</td>
+                    <td class="oStoreId">${order.storeId}</td>
+                    <td class="oPurchaseDate">${order.purchaseDate}</td>`;
             }
         });
-    window.location.replace("./Profile.html");
 }
 
 

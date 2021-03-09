@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BestEats.Logic;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.SqlServer;
@@ -203,9 +204,11 @@ namespace BestEats.DataAccess
             Save();
         }
 
+        
 
+        
         // for each loop is picking up the add size increase and throwing error.
-        public List<BestEats.DataAccess.Order> GetOrdersByCustID(int customerId)
+        public List<BestEats.Logic.CustomerOrder> GetOrdersByCustID(int customerId)
         {
 
             //var results = 
@@ -216,14 +219,26 @@ namespace BestEats.DataAccess
             var results = _context.Orders
             .Where(o => o.CustomerId == customerId).ToList();
 
+            List<BestEats.Logic.CustomerOrder> custOrder = new List<BestEats.Logic.CustomerOrder>();
             foreach (var result in results)
             {
-                results.Add(new BestEats.DataAccess.Order(result.OrderId, result.CustomerId, result.StoreId, 
-                    result.ProductId, result.ItemName, result.ProductQuantity, result.OrderPurchaseDate));
-            }
-            return results;
-        }
+                custOrder.Add(new BestEats.Logic.CustomerOrder()
+                {
+                    ItemName = result.ItemName,
+                    ItemAmount = result.ProductQuantity,
+                    StoreId = result.StoreId,
+                    PurchaseDate = result.OrderPurchaseDate
 
+                });
+                
+                    
+                    /*(result.OrderId, result.CustomerId, result.StoreId, 
+                    result.ProductId, result.ItemName, result.ProductQuantity, result.OrderPurchaseDate));
+                    */
+            }
+            return custOrder;
+        }
+        
 
 
 

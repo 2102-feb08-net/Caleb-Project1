@@ -34,7 +34,7 @@ namespace BestEats.Web.Controllers
         }
 
         [HttpGet("api/profile/new/{customerId}")]
-        public List<BestEats.DataAccess.Order> showAllCustomerOrders(int customerId)
+        public List<BestEats.Logic.CustomerOrder> showAllCustomerOrders(int customerId)
         {
             return _orderRepo.GetOrdersByCustID(customerId);
         }
