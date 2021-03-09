@@ -33,6 +33,12 @@ namespace BestEats.Web.Controllers
            _orderRepo.AddOrder(order);
         }
 
+        [HttpGet("api/profile/new/{customerId}")]
+        public List<BestEats.DataAccess.Order> showAllCustomerOrders(int customerId)
+        {
+            return _orderRepo.GetOrdersByCustID(customerId);
+        }
+
         /*
         [HttpPost("api/register/new")]
         public async Task RegisterCustomer([Required] BestEats.Logic.Customer cust)

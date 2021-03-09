@@ -7,7 +7,18 @@ namespace BestEats.Logic
 
 		private string _purchasedByCustomerName;
 
-		public int OrderId { get; set; }
+        public Order(int orderId, int customerId, int storeId, int productId, string itemName, int productQuantity, DateTimeOffset orderPurchaseDate)
+        {
+            OrderId = orderId;
+            CustomerId = customerId;
+            StoreId = storeId;
+            ProductId = productId;
+            ItemName = itemName;
+            ProductQuantity = productQuantity;
+            OrderPurchaseDate = orderPurchaseDate;
+        }
+
+        public int OrderId { get; set; }
 		public int CustomerId { get; set; }
 		public int StoreId { get; set; }
 		public int ProductId { get; set; }

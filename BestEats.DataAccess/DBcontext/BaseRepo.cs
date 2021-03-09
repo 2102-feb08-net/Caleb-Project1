@@ -204,6 +204,27 @@ namespace BestEats.DataAccess
         }
 
 
+        // for each loop is picking up the add size increase and throwing error.
+        public List<BestEats.DataAccess.Order> GetOrdersByCustID(int customerId)
+        {
+
+            //var results = 
+            //.Where(o => o.CustomerId == customerId).ToList();
+            //List<BestEats.Logic.Order> orders = new List<BestEats.Logic.Order>()
+            //    .Where(o => o.CustomerId == customerId);
+
+            var results = _context.Orders
+            .Where(o => o.CustomerId == customerId).ToList();
+
+            foreach (var result in results)
+            {
+                results.Add(new BestEats.DataAccess.Order(result.OrderId, result.CustomerId, result.StoreId, 
+                    result.ProductId, result.ItemName, result.ProductQuantity, result.OrderPurchaseDate));
+            }
+            return results;
+        }
+
+
 
 
         // PACKAGE REPO SECTION

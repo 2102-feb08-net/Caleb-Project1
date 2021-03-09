@@ -1,4 +1,10 @@
 ﻿
+table, thead, th, tr, td {
+    border: 3px solid #093000;
+}
+
+
+
 .user-dropdown .dropdown-menu {
     padding-top: 10px;
     padding-bottom: 10px;
