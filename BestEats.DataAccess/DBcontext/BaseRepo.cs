@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace BestEats.DataAccess
 {
-    public class BaseRepo
+    public class BaseRepo : ICustomerRepository
     {
         
         private readonly DB_BestEatsContext _context;

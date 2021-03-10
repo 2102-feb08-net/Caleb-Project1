@@ -34,7 +34,7 @@ async function registerSubmit(event) {
         },
     }).then(response => {
         if (!response.ok) {
-            throw new error(`Error on Network response with Customer (${response.status})`);
+            throw new Error(`Error on Network response with Customer (${response.status})`);
         }
         else {
             alert(`Successfully added ${customer.fullName}`);
