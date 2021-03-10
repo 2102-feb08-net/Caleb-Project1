@@ -5781,25 +5781,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\piran\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\tdunb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats.DataAccess\\BestEats.DataAccess.csproj",
+      "projectUniqueName": "C:\\revature\\Caleb-Project1\\BestEats.DataAccess\\BestEats.DataAccess.csproj",
       "projectName": "BestEats.DataAccess",
-      "projectPath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats.DataAccess\\BestEats.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\piran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats.DataAccess\\obj\\",
+      "projectPath": "C:\\revature\\Caleb-Project1\\BestEats.DataAccess\\BestEats.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\tdunb\\.nuget\\packages\\",
+      "outputPath": "C:\\revature\\Caleb-Project1\\BestEats.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\piran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\tdunb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5812,8 +5807,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats\\BestEats.Logic\\BestEats.Logic.csproj": {
-              "projectPath": "C:\\Users\\piran\\revature\\Caleb-Project1\\BestEats\\BestEats.Logic\\BestEats.Logic.csproj"
+            "C:\\revature\\Caleb-Project1\\BestEats\\BestEats.Logic\\BestEats.Logic.csproj": {
+              "projectPath": "C:\\revature\\Caleb-Project1\\BestEats\\BestEats.Logic\\BestEats.Logic.csproj"
             }
           }
         }
@@ -5858,7 +5853,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

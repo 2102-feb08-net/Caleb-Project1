@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BestEats.Logic;
+using BestEats.Logic.interfaces;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
@@ -13,7 +14,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace BestEats.DataAccess
 {
-    public class BaseRepo
+    public class BaseRepo : ICustomerRepository
     {
         
         private readonly DB_BestEatsContext _context;
@@ -27,7 +28,7 @@ namespace BestEats.DataAccess
 
         // CUSTOMER REPO SECTION *********
 
-        public IEnumerable<Customer> GetCustomer(string name = null)
+        public IEnumerable<Logic.Customer> GetCustomer(string name = null)
         {
             throw new NotImplementedException();
         }
@@ -114,7 +115,7 @@ namespace BestEats.DataAccess
             _context.Remove(customer);
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateCustomer(Logic.Customer customer)
         {
             throw new NotImplementedException();
         }
