@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BestEats.Logic;
-using BestEats.Logic.interfaces;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
@@ -14,7 +13,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace BestEats.DataAccess
 {
-    public class BaseRepo : ICustomerRepository
+    public class BaseRepo : ICustomerRepo
     {
         
         private readonly DB_BestEatsContext _context;

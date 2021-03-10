@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BestEats.Logic;
 
-namespace BestEats.Logic.interfaces
+namespace BestEats.DataAccess
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepo
     {
-        IEnumerable<Customer> GetCustomer(string name = null);
+        IEnumerable<Logic.Customer> GetCustomer(string name = null);
 
         BestEats.Logic.Customer GetCustomerByName(string customerName);
 
@@ -26,8 +27,6 @@ namespace BestEats.Logic.interfaces
 
         void UnregisterCustomer(int customerID);
 
-        void UpdateCustomer(Customer customer);
-
-
+        void UpdateCustomer(Logic.Customer customer);
     }
 }
